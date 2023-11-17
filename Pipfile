@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 attrs = "*"
+jupyter = "*"
 beautifulsoup4 = "*"
 certifi = "*"
 cffi = "*"
