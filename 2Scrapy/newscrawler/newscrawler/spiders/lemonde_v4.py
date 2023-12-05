@@ -20,7 +20,7 @@ class LemondeSpider(scrapy.Spider):
             
     def parse_category(self, response):
         for article in response.css(".river")[0].css(".teaser"):
-            title = self.clean_spaces(article.css("h3::text").extract_first())
+            title = article.css("h3::text").extract_first()
             image = article.css("img::attr(data-src)").extract_first()
             description = article.css(".txt3::text").extract_first()
             yield ArticleItem(
@@ -29,6 +29,6 @@ class LemondeSpider(scrapy.Spider):
                 description=description
             )
 
-    def clean_spaces(self, string):
-        if string:
-            return " ".join(string.split())
+    # def clean_spaces(self, string):
+    #     if string:
+    #         return " ".join(string.split())
