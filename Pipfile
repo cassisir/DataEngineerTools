@@ -59,6 +59,7 @@ Scrapy = "*"
 Twisted = "*"
 Werkzeug = "*"
 WTForms = "*"
+elasticsearch = "==6.8.2"
 
 [dev-packages]
 
